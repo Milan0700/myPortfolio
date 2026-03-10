@@ -1,7 +1,7 @@
 @php
     /** @var \App\DataObjects\Resume $resume */
 @endphp
-<x-layout :title="$resume->basics->name . 'Resume'">
+<x-layout :title="$resume->basics->name . ' Resume'">
     <x-slot:header>
         <!-- Hero Section with Full-Width Dark Gradient Background -->
         <div class="relative w-full bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
@@ -76,9 +76,9 @@
     </x-slot:header>
 
     <!-- Download Resume Button -->
-    {{-- @if ($allowDownload)
+    @if ($allowDownload)
         <x-download-resume-button />
-    @endif --}}
+    @endif
 
     <!-- Main Content -->
     <div class="pt-16 grid gap-y-16">

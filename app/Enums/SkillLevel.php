@@ -13,7 +13,7 @@ enum SkillLevel: string
     {
         return match (strtolower($level)) {
             'beginner', 'novice', 'junior' => self::Beginner,
-            'interMediate', 'mid-level' => self::InterMediate,
+            'intermediate', 'mid-level' => self::InterMediate,
             'advance', 'senior' => self::Advance,
             'master', 'expert' => self::Expert,
             'default' => null,
@@ -33,10 +33,10 @@ enum SkillLevel: string
     public function color(): string
     {
         return match ($this) {
-            self::Beginner => 'bg-green-100 text-green-800',
-            self::InterMediate => 'bg-emerald-100 text-emerald-800',
-            self::Advance => 'bg-blue-100 text-blue-800',
-            self::Expert => 'bg-sky-100 text-sky-800',
+            self::Beginner => 'bg-gradient-to-r from-green-500 to-emerald-500',
+            self::InterMediate => 'bg-gradient-to-r from-blue-500 to-cyan-500',
+            self::Advance => 'bg-gradient-to-r from-purple-500 to-indigo-500',
+            self::Expert => 'bg-gradient-to-r from-orange-500 to-red-500',
         };
     }
 

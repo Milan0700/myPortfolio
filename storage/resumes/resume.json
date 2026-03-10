@@ -1,37 +1,59 @@
 {
     "basics": {
-        "name": "John Doe",
-        "label": "Programmer",
-        "image": "",
-        "email": "john@gmail.com",
-        "phone": "(912) 555-4321",
+        "name": "Milan Patel",
+        "label": "FullStack Developer",
+        "image": "https://images.unsplash.com/photo-1644004680400-b9425e4efa18?q=80&w=2819&auto=format&fit=crop",
+        "email": "pmilan186@gmail.com",
+        "phone": "(+91) 7405052869 ",
         "url": "https://johndoe.com",
-        "summary": "A summary of John Doe…",
+        "summary": "Motivated PHP Laravel Developer with experience in developing dynamic web applications, RESTful APIs, and database-driven systems. Skilled in PHP, Laravel, MySQL, JavaScript, and Git with a strong focus on clean code, performance optimization, and scalable backend development.",
         "location": {
-            "address": "2712 Broadway St",
-            "postalCode": "CA 94115",
-            "city": "San Francisco",
-            "countryCode": "US",
-            "region": "California"
+            "address": "67 Gajanand Society",
+            "postalCode": "395004",
+            "city": "Surat",
+            "countryCode": "IN",
+            "region": "Gujarat"
         },
         "profiles": [
             {
                 "network": "Twitter",
-                "username": "john",
+                "username": "Milan",
                 "url": "https://twitter.com/john"
+            },
+            {
+                "network": "linkedIn",
+                "username": "Milan",
+                "url": "https://www.linkedin.com/in/milan-patel-26613921a/"
             }
         ]
     },
     "work": [
         {
-            "name": "Company",
-            "position": "President",
-            "url": "https://company.com",
-            "startDate": "2013-01-01",
-            "endDate": "2014-01-01",
-            "summary": "Description…",
+            "name": "Agami Tech",
+            "position": "Software Development Engineer",
+            "url": "https://www.agami-tech.com/",
+            "startDate": "2023-08-01",
+            "endDate": "2024-09-04",
+            "summary": "Maintained and extended an existing Laravel-based product, implementing new business requirements, fixing bugs, and improving system performance.Utilizing JavaScript, AngularJS, Node.js, and Socket.io to create dynamic and responsive user interfaces.Managing MySQL databases, writing optimized queries to enhance application performance.",
             "highlights": [
-                "Started the company"
+                "Maintain scalable backend systems using PHP and Laravel",
+                "Built RESTful APIs consumed by AngularJS frontend applications",
+                "Worked on WebRTC-based communication systems for real-time user interaction",
+                "Optimized SQL queries and database performance"
+            ]
+        },
+        {
+            "name": "Agami Tech",
+            "position": "Software Development Engineer Intern",
+            "url": "https://www.agami-tech.com/",
+            "startDate": "2023-01-01",
+            "endDate": "2023-07-30",
+            "summary": "Developed web application features using Laravel, PHP, MySQL, HTML, CSS, and JavaScript, gaining hands-on experience in full-stack web development.",
+            "highlights": [
+                "Developed web application features using Laravel, PHP, MySQL, HTML, CSS, and JavaScript",
+                "Implemented backend logic and database queries for dynamic web functionality",
+                "Built responsive user interfaces using HTML, CSS, and JavaScript",
+                "Gained hands-on experience with MVC architecture and modern web development practices"
             ]
         }
     ],
@@ -43,9 +65,7 @@
             "startDate": "2012-01-01",
             "endDate": "2013-01-01",
             "summary": "Description…",
-            "highlights": [
-                "Awarded 'Volunteer of the Month'"
-            ]
+            "highlights": ["Awarded 'Volunteer of the Month'"]
         }
     ],
     "education": [
@@ -57,9 +77,7 @@
             "startDate": "2011-01-01",
             "endDate": "2013-01-01",
             "score": "4.0",
-            "courses": [
-                "DB1101 - Basic SQL"
-            ]
+            "courses": ["DB1101 - Basic SQL"]
         }
     ],
     "awards": [
@@ -89,13 +107,25 @@
     ],
     "skills": [
         {
-            "name": "Web Development",
-            "level": "Master",
+            "name": "Backend Development",
+            "level": "interMediate",
+            "keywords": ["Node.js", "PHP", "Laravel"]
+        },
+        {
+            "name": "Frontend Development",
+            "level": "interMediate",
             "keywords": [
-                "HTML",
-                "CSS",
-                "JavaScript"
+                "JavaScript",
+                "Angular",
+                "HTML5",
+                "CSS3",
+                "Tailwind CSS"
             ]
+        },
+        {
+            "name": "Database Management",
+            "level": "interMediate",
+            "keywords": ["MySQL", "MongoDB", "Redis"]
         }
     ],
     "languages": [
@@ -107,10 +137,7 @@
     "interests": [
         {
             "name": "Wildlife",
-            "keywords": [
-                "Ferrets",
-                "Unicorns"
-            ]
+            "keywords": ["Ferrets", "Unicorns"]
         }
     ],
     "references": [
@@ -125,9 +152,7 @@
             "startDate": "2019-01-01",
             "endDate": "2021-01-01",
             "description": "Description...",
-            "highlights": [
-                "Won award at AIHacks 2016"
-            ],
+            "highlights": ["Won award at AIHacks 2016"],
             "url": "https://project.com/"
         }
     ]
