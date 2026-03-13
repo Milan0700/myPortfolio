@@ -6,7 +6,7 @@
         "email": "pmilan186@gmail.com",
         "phone": "(+91) 7405052869 ",
         "url": "https://johndoe.com",
-        "summary": "Motivated PHP Laravel Developer with experience in developing dynamic web applications, RESTful APIs, and database-driven systems. Skilled in PHP, Laravel, MySQL, JavaScript, and Git with a strong focus on clean code, performance optimization, and scalable backend development.",
+        "summary": "Motivated PHP Laravel Developer with experience in developing dynamic web applications, RESTful APIs, and database-driven systems. Skilled in PHP, Laravel, MySQL, NodeJs, JavaScript, and Git with a strong focus on clean code, performance optimization, and scalable backend development.",
         "location": {
             "address": "67 Gajanand Society",
             "postalCode": "395004",
@@ -15,11 +15,6 @@
             "region": "Gujarat"
         },
         "profiles": [
-            {
-                "network": "Twitter",
-                "username": "Milan",
-                "url": "https://twitter.com/john"
-            },
             {
                 "network": "linkedIn",
                 "username": "Milan",
@@ -70,14 +65,13 @@
     ],
     "education": [
         {
-            "institution": "University",
-            "url": "https://institution.com/",
-            "area": "Software Development",
-            "studyType": "Bachelor",
-            "startDate": "2011-01-01",
-            "endDate": "2013-01-01",
-            "score": "4.0",
-            "courses": ["DB1101 - Basic SQL"]
+            "institution": "R.N.G Patel Institute of Technology",
+            "url": "https://rngpit.ac.in/",
+            "area": "Computer Science & Engineering",
+            "studyType": "Bachelor of Engineering in",
+            "startDate": "2019-07-01",
+            "endDate": "2023-07-01",
+            "score": "8.4 CGPA"
         }
     ],
     "awards": [
@@ -148,12 +142,32 @@
     ],
     "projects": [
         {
-            "name": "Project",
-            "startDate": "2019-01-01",
-            "endDate": "2021-01-01",
-            "description": "Description...",
-            "highlights": ["Won award at AIHacks 2016"],
-            "url": "https://project.com/"
+            "name": "Task Manager",
+            "description": "Developed a task management web application using the Laravel framework and Tailwind CSS. The application allows users to create, manage, and track their tasks efficiently. Implemented features such as user authentication, task categorization, and deadline reminders. Utilized Laravel's Eloquent ORM for database interactions and Tailwind CSS for responsive and visually appealing UI design.",
+            "highlights": [
+                "Built a task management system using Laravel, PHP, MySQL, and Tailwind CSS.",
+                "Implemented authentication, email verification, and authorization for secure access control.",
+                "Developed CRUD operations for managing tasks and categories.",
+                "Used migrations, seeders, factories, and DTO pattern for structured data handling and development efficiency.",
+                "Implemented rate limiting to enhance application security."
+            ],
+            "url": "https://github.com/Milan0700/TaskManager"
+        },
+        {
+            "name": "Expense tracker",
+            "description": "Developed an Expense tracking application using Core PHP with OOP principles. The application allows users to track their expenses. Implemented features such as session-based authentication, file upload functionality for receipts, and CRUD operations to manage expenses and categories.",
+            "highlights": [
+                "Built an Expense tracking application using Core PHP with OOP principles",
+                "Implemented Dependency Injection container and DTO pattern for better application structure",
+                "Developed session-based authentication and file upload functionality",
+                "Created CRUD operations to manage expenses and categories."
+            ],
+            "url": "https://github.com/Milan0700/expennies"
+        },
+        {
+            "name": "URL Shortener",
+            "description": "Developed a URL shortening service using Node.js and JavaScript that generates short links for long URLs and redirects users to the original URL.",
+            "url": "https://github.com/Milan0700/urlShortner"
         }
     ]
 }

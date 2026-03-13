@@ -11,10 +11,7 @@ use Illuminate\View\Factory;
 class ResumeController extends Controller
 {
 
-    public function __construct(private ResumeService $resumeService)
-    {
-
-    }
+    public function __construct(private ResumeService $resumeService) {}
     public function index(Factory $factory): View
     {
         return view('resume', ['resume' => $this->resumeService->getResumeData(), 'allowDownload' => true]);
@@ -23,7 +20,7 @@ class ResumeController extends Controller
     public function downloadResume(): Response
     {
         $resume = $this->resumeService->getResumeData();
-        $pdf = Pdf::loadView('resume', ['resume' => $resumem, 'allowDownload' => false]);
+        $pdf = Pdf::loadView('resume', ['resume' => $resume, 'allowDownload' => false]);
         return $pdf->download($resume->basics->name . 'Resume.pdf');
     }
 }

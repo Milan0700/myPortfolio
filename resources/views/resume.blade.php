@@ -102,6 +102,46 @@
         @endif
 
         <!-- Work Experience Section -->
+        @if (!empty($resume->education))
+            <section>
+                <x-section-header title="Education" icon-color="from-emerald-500 to-teal-600">
+                    <x-slot:icon>
+                        <svg class="w-6 h-6 text-white stroke-2" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 14l6.16-3.422A12.083 12.083 0 0 1 18 14.75c0 2.071-2.686 3.75-6 3.75s-6-1.679-6-3.75c0-1.32.363-2.54.84-4.172L12 14z" />
+                        </svg>
+                    </x-slot:icon>
+                </x-section-header>
+
+                <div class="space-y-6">
+                    @foreach ($resume->education as $education)
+                        <x-section-card>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-slate-800 mb-2">
+                                        {{ $education->studyType }} {{ $education->area }} -
+                                        {{ $education->score }}</h3>
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full">
+                                        </div>
+                                        <span
+                                            class="text-lg font-semibold text-slate-600">{{ $education->institution }}</span>
+                                    </div>
+                                </div>
+
+                                <x-date-badge :start-date="$education->startDate" :end-date="$education->endDate" />
+                            </div>
+
+
+                        </x-section-card>
+                    @endforeach
+                </div>
+            </section>
+        @endif
+
+        <!-- Work Experience Section -->
         @if (!empty($resume->work))
             <section>
                 <x-section-header title="Work Experience" icon-color="from-emerald-500 to-teal-600">
