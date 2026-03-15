@@ -1,20 +1,29 @@
-FROM richarvey/nginx-php-fpm:latest
+FROM node:20 AS nodebuilder
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
 
 COPY . .
+RUN npm run build
 
-# Image config
-ENV SKIP_COMPOSER 1
-ENV WEBROOT /var/www/html/public
-ENV PHP_ERRORS_STDERR 1
-ENV RUN_SCRIPTS 1
-ENV REAL_IP_HEADER 1
+FROM php:8.4-fpm
 
-# Laravel config
-ENV APP_ENV production
-ENV APP_DEBUG false
-ENV LOG_CHANNEL stderr
+RUN apt-get update && apt-get install -y nginx
 
-# Allow composer to run as root
-ENV COMPOSER_ALLOW_SUPERUSER 1
+WORKDIR /var/www
 
-CMD ["/start.sh"]
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+COPY . .
+
+RUN composer install --no-dev --optimize-autoloader
+
+COPY --from=nodebuilder /app/public/build /var/www/public/build
+
+COPY nginx/default.conf /etc/nginx/sites-enabled/default
+
+RUN chown -R www-data:www-data storage bootstrap/cache
+
+EXPOSE 10000
+
+CMD service nginx start && php-fpm
