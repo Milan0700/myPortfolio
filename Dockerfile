@@ -1,4 +1,6 @@
+# Stage 1 — build frontend
 FROM node:20 AS nodebuilder
+
 WORKDIR /app
 
 COPY package*.json ./
@@ -8,9 +10,9 @@ COPY . .
 RUN npm run build
 
 
+# Stage 2 — php + nginx
 FROM php:8.4-fpm
 
-# install required packages for composer
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -18,19 +20,17 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     nginx
 
-# enable php zip extension
 RUN docker-php-ext-install zip
 
 WORKDIR /var/www
 
-# install composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
-# copy built frontend
+# copy built frontend assets
 COPY --from=nodebuilder /app/public/build /var/www/public/build
 
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
