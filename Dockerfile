@@ -7,20 +7,33 @@ RUN npm install
 COPY . .
 RUN npm run build
 
+
 FROM php:8.4-fpm
 
-RUN apt-get update && apt-get install -y nginx
+# install required packages for composer
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    zip \
+    libzip-dev \
+    nginx
+
+# enable php zip extension
+RUN docker-php-ext-install zip
 
 WORKDIR /var/www
 
+# install composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
+# copy built frontend
 COPY --from=nodebuilder /app/public/build /var/www/public/build
 
-COPY nginx/default.conf /etc/nginx/sites-enabled/default
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 RUN chown -R www-data:www-data storage bootstrap/cache
 
